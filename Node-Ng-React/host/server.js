@@ -8,7 +8,7 @@ const PORT = 3000;
 // Serve static assets
 app.use('/navbar', express.static(path.join(__dirname, '../navbar')));
 app.use('/cta', express.static(path.join(__dirname, '../cta')));
-app.use('/Node-Ng-React/ngFooter/dist/ng-footer/', express.static(path.join(__dirname, '.../ngFooter/dist/ng-footer/')));
+app.use('/ngFooter', express.static(path.join(__dirname, '../ngFooter')));
 
 app.get('/', (req, res) => {
     // Read the host HTML
@@ -33,5 +33,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Server is running on port https://localhost:${PORT}`);
+    console.log(`Server is running on port http://localhost:${PORT}`);
 });
